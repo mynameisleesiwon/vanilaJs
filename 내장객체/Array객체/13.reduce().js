@@ -4,6 +4,12 @@
 
 let points = [40, 100, 1, 5, 25, 10];
 // function(누적값,현재 배열의 요소, 인덱스 번호, 배열)
-let sum = points.reduce(function (total, currentValue) {
+let sum = points.reduce(function (
+  total /*누적값*/,
+  currentValue /*배열 첫 번째 값부터 들어감*/
+) {
+  console.log(total);
+  console.log(currentValue);
   return total + currentValue;
-}, 0);
+},
+0 /*누적값 처음 값*/);

@@ -1,5 +1,5 @@
 // 배열의 맨 앞에 요소를 추가하고, 배열의 길이를 반환
-let fruit = ["Banana", "Orange", "Apple", "Mango"];
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.unshift("Lemon"); // Lemon을 fruits 배열 맨 앞에 추가하고 배열의 길이 반환
 
 let cities = [
