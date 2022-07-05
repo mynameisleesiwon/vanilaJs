@@ -5,4 +5,7 @@ let str = "Please visit Seoul and Seoul";
 let n = str.replace("Seoul", "Jeju");
 
 let str1 = "Please visit Seoul and Seoul";
-let n1 = str1.replace(/Seoul/i, "Jeju"); // i -> insensitive의 약자로 대소문자를 구분하지 않겠다는 뜻
+let n1 = str1.replace(/SEOUL/i, "Jeju"); // i -> insensitive의 약자로 대소문자를 구분하지 않겠다는 뜻
+
+let str2 = "Please visit Seoul and Seoul";
+let n2 = str2.replace(/Seoul/g, "Jeju"); // g-> global의 약자로 일치하는 모든 문자열을 찾겠다는 뜻
