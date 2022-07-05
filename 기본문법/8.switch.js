@@ -7,25 +7,25 @@ switch (
   day // 조건식에 상수값을 전달
 ) {
   case 0:
-    dayName = "월요일";
+    dayName = "일요일";
     break;
   case 1:
-    dayName = "화요일";
+    dayName = "월요일";
     break;
   case 2:
-    dayName = "수요일";
+    dayName = "화요일";
     break;
   case 3:
-    dayName = "목요일";
+    dayName = "수요일";
     break;
   case 4:
-    dayName = "금요일";
+    dayName = "목요일";
     break;
   case 5:
-    dayName = "토요일";
+    dayName = "금요일";
     break;
   case 6:
-    dayName = "일요일";
+    dayName = "토요일";
     break;
   default: // case절의 상수 값이 모두 일치하지 않는 경우
     dayName = "";
