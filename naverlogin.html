@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"></script>
+  </head>
+  <body>
+    <div id="naverIdLogin"></div>
+    <script>
+      const naverLogin = new naver.LoginWithNaverId({
+        clientId: "cvvB6GWjcDe_HWERMYGX", // 개발자센터에 등록한 ClientID
+        callbackUrl: "http://localhost:5501/naverlogin.html", // 개발자센터에 등록한 callback Url
+        isPopup: false, // 팝업을 통한 연동처리 여부
+        loginButton: { color: "green", type: 3, height: 60 }, // 로그인 버튼의 타입을 지정
+      });
+
+      // 설정정보를 초기화하고 연동을 준비
+      naverLogin.init();
+
+      function getLoginStatus() {
+        naverLogin.getLoginStatus((status) => {
+          if (status) {
+            // status가 true면 로그인된 상태임
+            console.log(status);
+            console.log(naverLogin.user);
+
+            // 필수적으로 받아야 하는 프로필 정보가 있다면 callback 처리 시점에 체크
+            let email = naverLogin.user.getEmail();
+            if (email == undefined || email == null) {
+              alert("이메일은 필수정보입니다. 정보제공 동의해주세요");
+              // 사용자 정보 재동의를 위하여 다시 네아로 동의 페이지로 이동
+              naverLogin.reprompt();
+              return;
+            }
+          } else {
+            console.log("callback 처리에 실패하셨습니다");
+          }
+        });
+      }
+      getLoginStatus(); // 네이버 아이디 로그인 성공 후 콜백 URL인 현재 페이지가 다시 열리게 되고, 이때 로그인 정보를 가져옴
+    </script>
+  </body>
+</html>

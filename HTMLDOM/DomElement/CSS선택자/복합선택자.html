@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 하위 선택자 */
+      section ul {
+        border: 1px dotted black;
+        font-size: 14pt;
+      }
+      /* 자식 선택자 */
+      section > ul {
+        border: 1px dotted black;
+        font-size: 14px;
+      }
+      /* 인접 형제 선택자 : 나란히 붙어있는 요소 */
+      h1 + ul {
+        background: blue;
+      }
+      /* 일반 형제 선택자 : 조건을 충족하는 모든 동생 요소*/
+      h1 ~ ul {
+        background: green;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

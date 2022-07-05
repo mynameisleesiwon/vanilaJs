@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="para">HTML 요소에 대한 접근</p>
+    <p class="para">
+      클래스명을 사용해서 HTML 요소를 찾습니다. document.getElementByClassName
+    </p>
+    <script>
+      // 파라미터로 전달한 클래스명과 동일한 class 속성값을 포함하고 있는 모든 HTML요소 반환
+      let elements = document.getElementsByClassName("para");
+    </script>
+  </body>
+</html>

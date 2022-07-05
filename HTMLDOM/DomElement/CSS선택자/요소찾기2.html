@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    관심사:
+    <label>
+      <input type="checkbox" name="chk_interest" value="it" /> IT/컴퓨터
+    </label>
+    <label>
+      <input type="checkbox" name="chk_interest" value="entertainment" />
+      엔터테인먼트
+    </label>
+    <label>
+      <input type="checkbox" name="chk_interest" value="sports" / checked>
+      스포츠
+    </label>
+    <label>
+      <input type="checkbox" name="chk_interest" value="shoping" / checked> 쇼핑
+    </label>
+    <label>
+      <input type="checkbox" name="chk_interest" value="book" /> 도서/책
+    </label>
+    <script>
+      // getElementsByTagName 함수를 사용해서 체크박스가 선택된 HTML요소 찾기
+      let elements = document.getElementsByName("chk_interest");
+      let checked_items = [];
+      for (let i = 0; i < elements.length; i++) {
+        if (elements[i].checked) {
+          // 체크박스가 선택되어 있는 요소
+          checked_items.push(elements[i]);
+        }
+      }
+
+      // querySelectorAll 함수를 사용해서 체크박스가 선택된 HTML 요소 찾기
+      let elements2 = document.querySelectorAll("[name=chk_interest]:checked");
+    </script>
+  </body>
+</html>

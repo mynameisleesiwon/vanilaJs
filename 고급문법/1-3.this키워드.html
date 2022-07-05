@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // this에 Object 객체가 바인딩 된 경우
+      let person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          // object에서는 키에 대한 값으로 함수를 선언하면, 함수 내에서 object의 다른 키를 접근할 때는 this키워드를 사용
+          // 이때 this는 object 그 자체(여기서는 person)가 되기 때문에 this 키워드를 통해 object에 저장된 데이터에 키로 접근할 수 있게 됩니다.
+          return this.firstName + " " + this.lastName;
+        },
+      };
+    </script>
+  </body>
+</html>
