@@ -3,3 +3,6 @@
 // 대소문자 구분함
 let str = "Please visit Seoul and Seoul";
 let n = str.replace("Seoul", "Jeju");
+
+let str1 = "Please visit Seoul and Seoul";
+let n1 = str1.replace(/Seoul/i, "Jeju"); // i -> insensitive의 약자로 대소문자를 구분하지 않겠다는 뜻
