@@ -1,6 +1,6 @@
 // new Date()
 let now = new Date(); // 사용자의 브라우저의 시간
-console.log(now);
+console.log(now); // Tue Jul 05 2022 19:53:11 GMT+0900 (한국 표준시)
 
 // new Date(year, month, day, hours, minutes, seconds, milliseconds)
 let d = new Date(2021, 6, 24, 10, 33, 30, 0); // 특정 날짜, 시간을 지정해서 Date 객체 생성

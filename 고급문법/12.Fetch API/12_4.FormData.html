@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" / multiple>
+    <script>
+      // FormData 객체 생성, FormData는 파일을 포함한 데이터를 전송할 수 있도록 해주는 객체
+      let formData = new FormData();
+
+      // 사용자가 선택한 파일
+      let fileField = document.querySelector('input[type="file"]');
+
+      // 브라우저 정책상 console.log에는 안찍힘
+      formData.append("username", "abc123"); // 텍스트 데이터
+      formData.append("attachment", fileField.files[0]); // 파일
+
+      fetch("url", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .catch((error) => console.error("Error:", error))
+        .then((response) => console.log("Success:", JSON.stringify(response)));
+
+      // 2개 이상의 다중 파일도 전송 가능
+      let photos = document.querySelector('input[type="file"][multiple]'); // 다중 파일 선택 HTML 요소
+
+      formData.append("title", "My photos");
+      for (let i = 0; i < photos.files.length; i++) {
+        // 선택한 파일 수 만큼 반복문을 사용해서 FormData에 삽입
+        formData.append("photos", photos.files[i]);
+      }
+      fetch("url", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .catch((error) => console.error("Error:", error))
+        .then((response) => console.log("Success:", JSON.stringify(response)));
+    </script>
+  </body>
+</html>

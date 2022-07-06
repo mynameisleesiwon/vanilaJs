@@ -47,3 +47,8 @@ Math.random();
 Math.floor(Math.random() * 10); // 0과 9사이의 정수
 Math.floor(Math.random() * 101); // 0과 100사이의 정수
 Math.floor(Math.random() * 10) + 1; // 1과 10사이의 정수
+
+// 생성하고자 하는 랜덤 정수 값에 대한 최솟값과 최대값을 파라미터로 전달하면, 최솟값과 최댓값 사이의 정수를 반환하는 함수
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

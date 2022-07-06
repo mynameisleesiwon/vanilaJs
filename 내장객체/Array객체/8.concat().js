@@ -4,4 +4,4 @@ let arr1 = ["Cecilie", "Lone"];
 let arr2 = ["Emil", "Tobias", "Linus"];
 let arr3 = ["Robin", "Morgan"];
 
-let myChildren = arr1.concat(arr2, arr3);
+let myChildren = arr1.concat(arr2, arr3); // (7) ['Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus', 'Robin', 'Morgan']

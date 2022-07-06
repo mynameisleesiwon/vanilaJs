@@ -41,7 +41,7 @@ function rspPlayer(userRsp) {
       };
     }
   } else if (userRsp == "보") {
-    if (playerRsp == "주먹") {
+    if (playerRsp == "바위") {
       return {
         userRsp: userRsp,
         playerRsp: playerRsp,
