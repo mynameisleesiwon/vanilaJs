@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 웹 페이지의 모든 HTML DOM 요소가 로딩되면 발생하는 이벤트
+      window.addEventListener("load", function () {
+        // DOM을 조작하는 코드 구현
+        alert("g2");
+      });
+
+      // 웹 페이지에서 다른 페이지로 이동하거나 브라우저 창을 닫을 때 발생하는 이벤트
+      let nums = [3, 5, 1, 7, 9];
+      window.addEventListener("unload", function () {
+        nums = null;
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

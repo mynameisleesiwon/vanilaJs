@@ -8,10 +8,17 @@
   </head>
   <body>
     <input type="text" id="text1" onblur="doBlur(this)" />
+    <input type="text" id="text2" />
+
     <script>
+      let text = document.getElementById("text1");
+      if (text.value == 3) {
+        document.getElementById("text2").focus();
+      }
+
       function doBlur(obj) {
-        if (obj.value == "") {
-          alert("필수값입니다. 반드시 입력하세요.");
+        if (obj.value.length == 3) {
+          document.getElementById("text2").focus();
         }
         console.log(obj.value);
       }
